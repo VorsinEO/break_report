@@ -25,7 +25,7 @@ imgbb_api_key = st.secrets.get("IMGBB_API_KEY", os.environ["IMGBB_API_KEY"])
 
 # Page config for mobile-first design
 st.set_page_config(
-    page_title="Create Bug Report",
+    page_title="Create Breakdown Report",
     layout="centered",
     initial_sidebar_state="collapsed"
 )
@@ -53,7 +53,8 @@ if "messages" not in st.session_state:
     # Add the system message as the first message
     st.session_state.messages.append({
         "role": "system",
-        "content": """You are an assistant for mechanics working in the mining industry. Your job is to collect the following fields step-by-step:
+        "content": """You are an assistant for mechanics working in the mining industry.
+ Your job is to collect the following fields step-by-step:
 - equipment type (e.g., Dump Truck, Excavator)
 - equipment ID (e.g., 743)
 - problem description
