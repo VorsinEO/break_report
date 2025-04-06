@@ -125,7 +125,7 @@ def upload_to_imgbb(image_file):
         return None
 
 # Title
-st.title("Create Bug Report")
+st.title("Create Breakdown Report")
 
 # User email input at the top
 if not st.session_state.user_email:
